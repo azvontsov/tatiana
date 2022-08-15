@@ -1,0 +1,670 @@
+<html lang="en" class="">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Art of Tatiana Kanter</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="The Art of Tatiana Kanter" />
+    <meta
+      name="keywords"
+      content="bootstrap, art, creative, acrylic, showcase, shop, html5, css3, javascript, gallery"
+    />
+    <meta name="Tatiana Kanter" content="The Art of Tatiana" />
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/icon.png"
+    />
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="./boxicons.min.css" />
+    <link rel="stylesheet" media="screen" href="./swiper-bundle.min.css" />
+
+    <link rel="stylesheet" media="screen" href="./css/theme.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./portfolio/index.bundle.css" />
+    <link rel="stylesheet" media="screen" href="./css/theme.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <script>
+      let mode = window.localStorage.getItem("mode"),
+        root = document.getElementsByTagName("html")[0];
+      if (mode !== null && mode === "dark") {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Navbar -->
+      <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
+      <header
+        class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top"
+      >
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="./assets/img/logo.svg" width="67" alt="Silicon" />
+            Tatiana Kanter
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#paintings" class="nav-link">Paintings</a>
+                </li>
+                <li class="nav-item">
+                  <a href="about.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a href="story.html" class="nav-link">the Story</a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="offcanvas-header border-top">
+              <a
+                href="#"
+                class="btn btn-primary w-100"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="bi bi-cart fs-4 lh-1 me-1"></i>
+                &nbsp;Buy now
+              </a>
+            </div> -->
+          </div>
+          <div
+            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
+            data-bs-toggle="mode"
+          >
+            <input type="checkbox" class="form-check-input" id="theme-mode" />
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Light</label
+            >
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Dark</label
+            >
+          </div>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          ></button>
+          <a
+            href="#"
+            class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bi bi-cart fs-5 lh-1 me-1"></i>
+            &nbsp;Buy now
+          </a>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section
+        class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden"
+        style="background-image: url(./assets/img/bg.png)"
+      >
+        <div class="container vh-100">
+          <div class="row flex-nowrap vh-100">
+            <div
+              class="col-lg-4 col-md-5 d-flex flex-column text-center text-md-start py-5"
+            >
+              <h1 class="display-5 mt-auto mb-4"></h1>
+              <h1 class="display-5 mt-auto mb-4"></h1>
+              <h1 class="display-5 mt-auto mb-4">The Art Of Tatiana Kanter</h1>
+              <p class="lead text-light opacity-90 pb-5 mb-0 mb-md-3">
+                Enchanting Your Everyday<br class="d-none d-md-inline" />
+              </p>
+              <img
+                src="./assets/img/tanya.png"
+                width="290"
+                class="d-block mx-auto mx-md-0"
+                alt="Tanya avatar"
+              />
+              <p class="lead text-light opacity-70 pb-5 mb-0 mb-md-3">
+                Step into a magical place that explores the allegorical
+                intersection between the natural world and our personal soul
+                journeys - a wonder-filled space that is both gallery and
+                immersive art experience. Soak it in, tour the attached working
+                studio and collect paintings & tools for wonder.<br
+                  class="d-none d-md-inline"
+                />
+              </p>
+              <div
+                class="position-relative d-flex align-items-center justify-content-center justify-content-md-start mb-md-4 mb-lg-5 mt-auto"
+              >
+                <div class="btn btn-icon btn-secondary rounded-circle">
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+                <a
+                  href="#paintings"
+                  class="nav-link stretched-link text-light fw-normal opacity-80 py-2 px-3"
+                  data-scroll=""
+                  data-scroll-offset="70"
+                  >View Paintings</a
+                >
+              </div>
+            </div>
+            <div class="d-flex flex-shrink-0 align-items-start">
+              <img
+                src="./assets/img/screens01.png"
+                class="rellax d-block flex-shrink-0 mt-n5"
+                width="486"
+                height="1390"
+                alt="Screens"
+                data-rellax-speed="4"
+                data-disable-parallax-down="md"
+                style="transform: translate3d(0px, 0px, 0px)"
+              />
+              <img
+                src="./assets/img/screens02.png"
+                class="rellax d-block flex-shrink-0 mt-5"
+                width="486"
+                height="1470"
+                alt="Screens"
+                data-rellax-speed="-4"
+                data-disable-parallax-down="md"
+                style="transform: translate3d(0px, 0px, 0px)"
+              />
+              <img
+                src="./assets/img/screens03.png"
+                class="rellax d-block flex-shrink-0"
+                width="486"
+                height="1480"
+                alt="Screens"
+                data-rellax-speed="4"
+                data-disable-parallax-down="md"
+                style="transform: translate3d(0px, 0px, 0px)"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO-->
+
+      <section class="py-15 py-xl-20" id="paintings">
+        <div class="container mt-5 mt-xl-10">
+          <div class="row mb-10 g-3 g-xl-5 align-items-end">
+            <div class="col-lg-8">
+              <h1 class="display-2">
+                Nothing can replace the magic of experiencing art in real life.
+              </h1>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <p class="fs-lg text-muted">Acrylic Enchantment</p>
+            </div>
+          </div>
+
+          <!-- PICTURES -->
+          <div
+            class="row mb-10 g-3 g-xl-5 gallery-1"
+            id="grid1"
+            data-isotope=""
+            style="position: relative; height: 1633.28px"
+          >
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 0px; top: 0px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/05.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/05.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 379.984px; top: 0px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-3-4"
+                data-bp='{"imgSrc": "./portfolio/assets/img/06.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/06.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 759.968px; top: 0px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/07.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/07.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 0px; top: 379.984px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-3-4"
+                data-bp='{"imgSrc": "./portfolio/assets/img/08.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/08.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 759.968px; top: 379.984px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-3-4"
+                data-bp='{"imgSrc": "./portfolio/assets/img/09.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/09.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 379.984px; top: 493.297px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/10.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/10.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 0px; top: 873.281px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/11.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="background-image: url('./portfolio/assets/img/11.jpeg"
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-8"
+              style="position: absolute; left: 379.984px; top: 873.281px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/12.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/12.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 0px; top: 1253.26px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/13.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/13.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+
+            <!-- PART 2 -->
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 0px; top: 0px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/14.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/14.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 379.984px; top: 0px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-3-4"
+                data-bp='{"imgSrc": "./portfolio/assets/img/15.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/15.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 759.968px; top: 0px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/16.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/16.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 0px; top: 379.984px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-3-4"
+                data-bp='{"imgSrc": "./portfolio/assets/img/17.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/17.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 759.968px; top: 379.984px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-3-4"
+                data-bp='{"imgSrc": "./portfolio/assets/img/18.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/18.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 379.984px; top: 493.297px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/19.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/19.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 0px; top: 873.281px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/20.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="background-image: url('./portfolio/assets/img/20.jpeg"
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-8"
+              style="position: absolute; left: 379.984px; top: 873.281px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/21.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/21.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+            <div
+              class="col-md-6 col-lg-4"
+              style="position: absolute; left: 0px; top: 1253.26px"
+            >
+              <figure
+                class="media media-image equal-2-1 equal-md-1-1"
+                data-bp='{"imgSrc": "./portfolio/assets/img/22.jpeg" , "parentGalleryClass": "gallery-1" }'
+              >
+                <span
+                  style="
+                    background-image: url('./portfolio/assets/img/22.jpeg');
+                  "
+                >
+                </span>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- More features (Grid) -->
+      <section class="container pt-4 pb-5 py-lg-5">
+        <h2
+          class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3"
+        >
+          Most Popular
+        </h2>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5"
+        >
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 card-hover bg-light border-0">
+              <div class="bg-secondary rounded-3 w-auto m-2">
+                <img src="./portfolio/assets/img/01.png" alt="" />
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Paint #1</h3>
+                <p class="fs-sm mb-0">Description...</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 card-hover bg-light border-0">
+              <div class="bg-secondary rounded-3 w-auto m-2">
+                <img src="./portfolio/assets/img/02.png" alt="" />
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Paint #2</h3>
+                <p class="fs-sm mb-0">Description...</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 card-hover bg-light border-0">
+              <div class="bg-secondary rounded-3 w-auto m-2">
+                <img src="./portfolio/assets/img/03.png" alt="" />
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Paint #3</h3>
+                <p class="fs-sm mb-0">Description...</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 card-hover bg-light border-0">
+              <div class="bg-secondary rounded-3 w-auto m-2">
+                <img src="./portfolio/assets/img/04.png" alt="" />
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Paint #4</h3>
+                <p class="fs-sm mb-0">Description...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer border-top pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-2 pt-md-4 pt-lg-5 pb-xl-3">
+        <div class="row justify-content-center pt-xxl-2">
+          <div class="col-xl-6 col-lg-7 col-md-9 col-sm-11">
+            <h2 class="h1 pb-3 mb-3">Subscribe to My Newsletter</h2>
+            <form
+              class="subscription-form position-relative validate"
+              action="#"
+              method="post"
+              name="mc-embedded-subscribe-form"
+              target="_blank"
+              novalidate=""
+            >
+              <div class="d-flex flex-column flex-sm-row">
+                <div class="position-relative w-100 mb-3 mb-sm-0 me-sm-3">
+                  <input
+                    class="form-control form-control-lg ps-5"
+                    type="email"
+                    name="EMAIL"
+                    placeholder="Your email"
+                    required=""
+                  />
+                  <i
+                    class="bi bi-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3"
+                  ></i>
+                </div>
+                <button
+                  class="btn btn-primary shadow-primary btn-lg"
+                  type="submit"
+                  name="subscribe"
+                >
+                  Subscribe*
+                </button>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+              <div style="position: absolute; left: -5000px" aria-hidden="true">
+                <input
+                  class="subscription-form-antispam"
+                  type="text"
+                  name="b_c7103e2c981361a6639545bd5_29ca296126"
+                  tabindex="-1"
+                />
+              </div>
+
+              <div
+                class="subscription-status position-absolute top-100 start-50 translate-middle-x"
+              ></div>
+            </form>
+          </div>
+        </div>
+        <div class="pt-5 mt-lg-3 mt-xl-4">
+          <p class="text-muted mb-0">
+            © All rights reserved. Made with
+            <i
+              class="bi bi-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"
+            ></i>
+            by&nbsp;
+            <a href="#" class="text-muted" target="_blank" rel="noopener"
+              >Tatiana Kanter</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll="">
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bi bi-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/smooth-scroll.polyfills.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/rellax.min.js"></script>
+    <script src="./js/lottie-player.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <script src="./portfolio/vendor.bundle.js"></script>
+    <script src="./portfolio/index.bundle.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="./js/theme.min.js"></script>
+  </body>
+  <grammarly-desktop-integration
+    data-grammarly-shadow-root="true"
+  ></grammarly-desktop-integration>
+</html>
